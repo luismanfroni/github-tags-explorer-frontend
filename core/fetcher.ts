@@ -11,7 +11,7 @@ export async function fetcher<Data = any>(
     const data = await response.json();
     return data;
   } else {
-    return response;
+    return response as never;
   }
 }
 
